@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Any-Haw Litsong Manok</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <div class="brand-name">Any-Haw</div>
+      <div class="tagline">LITSONG MANOK</div>
+    </div>
+    <div class="nav-links">
+      <a href="#">MENU</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">HOME</a>
+      <a href="#">CART</a>
+    </div>
+  </div>
+
+  <!-- BACK BUTTON -->
+  <div class="back-button-container">
+    <a href="javascript:history.back()" class="back-button">BACK</a>
+  </div>
+
+  <!-- CONTACT DETAILS FORM -->
+  <div class="guest-details-form">
+    <h2>Contact Details</h2>
+    <form id="guestForm" onsubmit="return validateForm()">
+      <div class="input-wrapper">
+        <input type="text" id="fullName" name="fullName" required placeholder=" ">
+        <label for="fullName">Full Name</label>
+        <span class="error">Please enter your full name</span>
+      </div>
+
+      <div class="input-wrapper">
+        <input type="email" id="email" name="email" required placeholder=" ">
+        <label for="email">Email</label>
+        <span class="error">Please enter a valid email</span>
+      </div>
+
+      <div class="input-wrapper">
+        <input type="tel" id="mobile" name="mobile" required placeholder=" ">
+        <label for="mobile">Mobile Number</label>
+        <span class="error">Invalid Mobile Number (Ex. 9171234567)</span>
+      </div>
+    </form>
+  </div>
+
+  <!-- ADDRESS DETAILS SECTION -->
+  <div class="guest-details-form">
+    <h2>Deliver To</h2>
+    <form id="addressForm" onsubmit="return validateAddressForm()">
+      <div class="input-wrapper">
+        <input type="text" id="address" name="address" required placeholder=" ">
+        <label for="address">Address Details (Required)</label>
+      </div>
+
+      <div class="input-wrapper">
+        <input type="text" id="notes" name="notes" placeholder=" ">
+        <label for="notes">Notes to Store/Rider (Optional)</label>
+      </div>
+
+      <div class="form-group">
+  <p>Select Address Type</p>
+  <div class="address-type-buttons">
+    <button type="button" class="address-btn active" data-value="residential">Residential</button>
+    <button type="button" class="address-btn" data-value="office">Office</button>
+    <input type="hidden" name="addressType" id="addressType" value="residential">
+  </div>
+</div>
+
+    </form>
+  </div>
+
+  <!-- PAYMENT SECTION -->
+  <div class="guest-details-form">
+    <h2>Payment Method</h2>
+    <div class="payment-option">
+      <label>
+        <input type="radio" name="payment" checked>Cash on Delivery
+      </label>
+      <img src="image/cashondelivery.png" class="icon" alt="Cash On Delivery">
+    </div>
+
+    <div class="payment-option">
+      <label>
+        <input type="radio" name="payment">PayMaya
+      </label>
+      <img src="image/paymaya.png" class="icon" alt="Paymaya">
+    </div>
+
+    <div class="payment-option">
+      <label>
+        <input type="radio" name="payment"> Debit / Credit Card
+      </label>
+      <img src="https://img.icons8.com/ios-filled/50/000000/bank-card-back-side.png" class="icon" alt="Card">
+    </div>
+
+    <div class="payment-option">
+      <label>
+        <input type="radio" name="payment"> GCash
+      </label>
+      <img src="image/gcash.png" class="icon" alt="GCash">
+    </div>
+  </div>
+<div class="bottom-navbar">
+ <button id="confirmOrderBtn" class="confirm-order-btn" onclick="confirmOrder()" disabled> Confirm Order
+</button>
+
+  </button>
+</div>
+</div>
+  <div class="bottom-nav-links">
+  </div>
+  <a href="" class="confirm-order-btn">Confirm Order</a>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

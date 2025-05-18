@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Address Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  </div>
+
+  <div class="address-section">
+    <form id="addressForm" onsubmit="return validateAddressForm()">
+      <h2>Address Details</h2>
+
+      <div class="form-group">
+        <label for="address">Address details (required)</label>
+        <input type="text" id="address" name="address" placeholder="e.g. Floor, unit number, street, village/barangay, nearby landmarks" required>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes to store/rider (optional)</label>
+        <input type="text" id="notes" name="notes" placeholder="e.g. Special requests, delivery instructions">
+      </div>
+
+
+      <div class="form-group">
+        <p>Select address type</p>
+        <label class="radio-option">
+          <input type="radio" name="addressType" value="residential" checked>
+          <span class="checkmark"></span> Residential
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="addressType" value="office">
+          <span class="checkmark"></span> Office
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validateAddressForm() {
+      const address = document.getElementById('address').value.trim();
+      if (!address) {
+        alert('Please enter your address details.');
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
